@@ -1,0 +1,13 @@
+This is the giggles virtual machine, it executes bytecode as instructions
+current version (.1) is identical to brainfuck with the following key in hex:
+
+00 > (move to next cell)
+01 < (move to previous cell)
+02 + (add one to current cell)
+03 - (subtract one from current cell)
+04 . (print current cell on screen)
+05 , (accept input to current cell)
+06 [ (start loop if current cell is not 0)
+07 ] (end loop)
+
+later versions will include an assembler to create a binary file from human readable text
