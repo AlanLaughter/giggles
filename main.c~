@@ -72,41 +72,33 @@ int main(int argc, char *argv[])
                     }
                 case 0:
                     if(ignore == 0){
-                        pointer += (buffer[instr+1] & 0xFF);
-                        instr++;
+                        pointer += 1;
                         if (pointer >= 30000){
                             pointer = 29999;
                         }
                         break;
                     }else{
-                        instr++;
                         break;}
                 case 1:
                     if(ignore == 0){
-                        pointer -= (buffer[instr+1] & 0xFF);
-                        instr++;
+                        pointer -= 1;
                         if (pointer < 0){
                             pointer = 0;
                         }
                         break;
                     }else{
-                        instr++;
                         break;}
                 case 2:
                     if(ignore == 0){
-                        tape[pointer] += (buffer[instr+1] & 0xFF);
-                        instr++;
+                        tape[pointer] += 1;
                         break;
                     }else{
-                        instr++;
                         break;}
                 case 3:
                     if(ignore == 0){
-                        tape[pointer] -= (buffer[instr+1] & 0xFF);
-                        instr++;
+                        tape[pointer] -= 1;
                         break;
                     }else{
-                        instr++;
                         break;}
                 case 4:
                     if(ignore == 0){
